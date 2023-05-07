@@ -9,8 +9,7 @@ namespace EPV_WebAPI.Controllers
             return View();
         }
         // generamos el token que usara el cliente
-        [HttpPost]
-        [Route("getTokenLogin")]
+        [HttpPost("getTokenLogin")]
         public ActionResult GetTokenLogin(string email, string password)
         {
             Clases.Log.LogWrite($"GetTokenLogin: user={email}, password={password}");
